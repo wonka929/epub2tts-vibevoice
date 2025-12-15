@@ -547,8 +547,11 @@ def get_voice_path(speaker_name):
 
     if not os.path.exists(voices_dir):
         raise FileNotFoundError(
-            f"Could not find VibeVoice voices directory. "
-            f"Please ensure VibeVoice is properly installed."
+            f"Could not find VibeVoice voices directory at {voices_dir}.\n"
+            f"The PyPI vibevoice package may not include voice files.\n"
+            f"Please install VibeVoice from GitHub:\n"
+            f"  pip uninstall vibevoice\n"
+            f"  pip install git+https://github.com/microsoft/VibeVoice.git"
         )
 
     # List available voices

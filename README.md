@@ -163,7 +163,14 @@ Follow the Linux installation instructions in WSL2.
 
 ## VibeVoice Model
 
-This application uses [Microsoft VibeVoice](https://github.com/microsoft/VibeVoice) for text-to-speech synthesis. The model will be automatically downloaded from HuggingFace on first use.
+This application uses [Microsoft VibeVoice](https://github.com/microsoft/VibeVoice) for text-to-speech synthesis.
+
+**What's installed automatically:**
+- VibeVoice package (installed from GitHub during setup to include voice files)
+- Pre-extracted voice files for 25+ speakers in multiple languages
+- The VibeVoice-Realtime-0.5B model (downloaded from HuggingFace on first use)
+
+**Note:** The PyPI vibevoice package doesn't include voice files, so we install directly from GitHub.
 
 Voice prompts are provided in pre-extracted embedded format (.pt files) included with VibeVoice. For custom voice creation, please refer to the VibeVoice documentation.
 
